@@ -1,9 +1,11 @@
 
-<ul style="list-style-type: none;" class="collection with-header">
-  <h1 class="collection-header">My Tasks</h1>
+<ul style="list-style-type: none;" >
+  <h1>My Tasks</h1>
   <% @tasks.each do |task| %>
-  <li class="collection-item">
+  <li>
+  <span>
   <%= check_box_tag('task', 'completed', task.completed) %>
+  </span>
   <%= link_to task.title, task %>
   </li>
   <% end %>
