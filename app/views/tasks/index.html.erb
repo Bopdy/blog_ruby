@@ -1,13 +1,11 @@
+<h1>My Tasks</h1>
 
 <ul style="list-style-type: none;" >
-  <h1>My Tasks</h1>
   <% @tasks.each do |task| %>
-  <li>
-  <span>
-  <%= check_box_tag('task', 'completed', task.completed) %>
-  </span>
-  <%= link_to task.title, task %>
-  </li>
+    <li>
+      <%= check_box_tag("task", 'completed', task.completed, class:'filled-in') %>
+      <%= link_to task.title, task %>
+    </li>
   <% end %>
 </ul>
 
